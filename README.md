@@ -27,7 +27,7 @@ dependencies {
 You can use the test containers library to create a generic container that runs a docker image
 containing a [WSO2](https://wso2.com/) component (e.g. [WSO2 API Manager](http://wso2.com/api-management/)).
 Next you can create an instance of a Wso2StartupCheckLogConsumer and attached it to your container, finally
-in your @Before method in your unit test class you can call waitForStartMessageInLog. This method
+in your @Before method in your unit test class you can call waitForStartupMessageInLog. This method
 will block until a start message is shown in the log.
 
 ```
@@ -47,7 +47,7 @@ public void setUp() {
 }
 ```
 
-The waitForStartMessageInLog method can also be overloaded to provide a timeout
+The waitForStartupMessageInLog method can also be overloaded to provide a timeout
 and delay value. The default timeout value is 60000 milliseconds (1 minute) and 
 default delay value is 1000 milliseconds (1 second).
 
@@ -66,7 +66,7 @@ Overriding the timeout and delay values can be done as follows:
 public void setUp() {
     int timeout = 30000;
     int delay = 500;
-    logConsumer.waitForStartMessageInLog(timeout, delay);
+    logConsumer.waitForStartupMessageInLog(timeout, delay);
 }
 ```
 
@@ -75,7 +75,7 @@ public void setUp() {
 The Wso2StartupCheckLogConsumer extends the StartupCheckLogConsumer class. This
 class can be used to create other StartupCheckLogConsumers with custom startup
 messages. A startup message is a string that the class will look for in the log
-of the docker machine, when a line of log output appears the waitForStartMessageInLog
+of the docker machine, when a line of log output appears the waitForStartupMessageInLog
 will complete. To create a StartupCheckLogConsumer with a custom startup message
 simply create an instance passing the startup message you want to check for as a
 constructor argument:

@@ -22,12 +22,12 @@ public class Wso2StartupCheckLogConsumerTest {
 
         consumer.accept(outputFrame);
 
-        assertThat(consumer.waitForStartMessageInLog(TIMEOUT, DELAY)).isTrue();
+        assertThat(consumer.waitForStartupMessageInLog(TIMEOUT, DELAY)).isTrue();
     }
 
     @Test(expected = StartupTimeoutException.class)
     public void shouldThrowExceptionIfStartupMessageIsNotConsumed() {
-        consumer.waitForStartMessageInLog(TIMEOUT, DELAY);
+        consumer.waitForStartupMessageInLog(TIMEOUT, DELAY);
     }
 
 }

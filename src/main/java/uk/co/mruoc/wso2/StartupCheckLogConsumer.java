@@ -25,11 +25,11 @@ public class StartupCheckLogConsumer implements Consumer<OutputFrame> {
             started = true;
     }
 
-    public boolean waitForStartMessageInLog() {
-        return waitForStartMessageInLog(DEFAULT_TIMEOUT, DEFAULT_DELAY);
+    public boolean waitForStartupMessageInLog() {
+        return waitForStartupMessageInLog(DEFAULT_TIMEOUT, DEFAULT_DELAY);
     }
 
-    public boolean waitForStartMessageInLog(int timeout, int delay) {
+    public boolean waitForStartupMessageInLog(int timeout, int delay) {
         int totalWait = 0;
         while(!isStarted() && totalWait < timeout) {
             sleeper.sleep(delay);
