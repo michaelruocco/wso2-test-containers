@@ -1,5 +1,9 @@
 # WSO2 Test Containers
 
+[![Build Status](https://travis-ci.org/michaelruocco/wso2-test-containers.svg?branch=master)](https://travis-ci.org/michaelruocco/wso2-test-containers)
+[![Coverage Status](https://coveralls.io/repos/github/michaelruocco/wso2-test-containers/badge.svg?branch=master)](https://coveralls.io/github/michaelruocco/wso2-test-containers?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ecd24e8d99a44f98915b769114e025aa)](https://www.codacy.com/app/michaelruocco/wso2-test-containers?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=michaelruocco/wso2-test-containers&amp;utm_campaign=Badge_Grade)
+
 This library utility classes to help with integration testing when using [WSO2](https://wso2.com/) components. It makes
 use of docker and this [test containers](https://github.com/testcontainers/testcontainers-java).
 
