@@ -1,9 +1,9 @@
 # WSO2 Test Containers
 
-This library utility classes to help with integration testing when using WSO2 components. It makes use of docker and
-this [test containers](https://github.com/testcontainers/testcontainers-java).
+This library utility classes to help with integration testing when using [WSO2](https://wso2.com/) components. It makes
+use of docker and this [test containers](https://github.com/testcontainers/testcontainers-java).
 
-The test containers library itself provides the ability to sping up a docker container using a junit rule, this
+The test containers library itself provides the ability to spin up a docker container using a junit rule, this
 library provides a class that will wait until a container outputs a specified log message to allow tests to block
 until the component inside the docker container has started.
 
@@ -21,10 +21,10 @@ dependencies {
 ## Creating a test that waits for a WSO2 component to start
 
 You can use the test containers library to create a generic container that runs a docker image
-containing a WSO2 component (e.g. WSO2 API Manager). Next you can create an instance of a
-Wso2StartupCheckLogConsumer and attached it to your container, finally in your @Before method
-in your unit test class you can call waitForStartMessageInLog. This method will block until a
-start message is shown in the log.
+containing a [WSO2](https://wso2.com/) component (e.g. [WSO2 API Manager](http://wso2.com/api-management/)).
+Next you can create an instance of a Wso2StartupCheckLogConsumer and attached it to your container, finally
+in your @Before method in your unit test class you can call waitForStartMessageInLog. This method
+will block until a start message is shown in the log.
 
 ```
 private static final String DOCKER_IMAGE = "michaelruocco/wso2am:1.9.1";
