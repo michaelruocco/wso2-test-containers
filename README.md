@@ -44,7 +44,7 @@ public final GenericContainer container = new GenericContainer(DOCKER_IMAGE)
 
 @Before
 public void setUp() {
-    logConsumer.waitForStartMessageInLog();
+    logConsumer.waitForStartupMessageInLog();
 }
 ```
 
