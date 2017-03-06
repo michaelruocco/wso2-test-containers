@@ -31,7 +31,7 @@ public class StartupCheckLogConsumer implements Consumer<OutputFrame> {
 
     public boolean waitForStartupMessageInLog(int timeout, int delay) {
         int totalWait = 0;
-        while(!isStarted() && totalWait < timeout) {
+        while (!isStarted() && totalWait < timeout) {
             sleeper.sleep(delay);
             totalWait += delay;
         }
@@ -41,8 +41,9 @@ public class StartupCheckLogConsumer implements Consumer<OutputFrame> {
     }
 
     private boolean isStartMessage(String value) {
-        if (value != null)
-            System.out.print(value);
+        if (value == null)
+            return false;
+        System.out.print(value);
         return value.contains(startupMessage);
     }
 
