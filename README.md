@@ -19,7 +19,7 @@ gradle you would do this by adding the following to your build.gradle file:
 
 ```
 dependencies {
-    compile group: 'com.github.michaelruocco', name: 'wso2-test-containers', version: '1.0.1'
+    compile group: 'com.github.michaelruocco', name: 'wso2-test-containers', version: '1.0.2'
 }
 ```
 

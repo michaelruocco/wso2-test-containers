@@ -78,7 +78,7 @@ uploadArchives {
                 description 'Library containing utilities for testing WSO2 components using docker containers'
                 groupId 'com.github.michaelruocco'
                 artifactId 'wso2-test-containers'
-                version '1.0.1'
+                version '1.0.2'
                 url 'https://github.com/michaelruocco/wso2-test-containers'
 
                 developers {
